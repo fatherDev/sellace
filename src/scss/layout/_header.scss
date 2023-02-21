@@ -1,0 +1,61 @@
+body {
+    background-color: $gray-100;
+    min-height: 200vh;
+}
+
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include transition;
+
+    &--scrolled {
+        transform: translateY(-100%);
+    }
+
+    &__col,
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__inner {
+        justify-content: space-between;
+        padding: 24px 16px;
+    }
+
+    &__col {
+        display: none;
+
+        @include media(tablet-s) {
+            display: flex;
+        }
+    }
+
+    &__mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        background: radial-gradient(
+                35.76% 44.26% at 5.1% 7.01%,
+                rgba(0, 135, 254, 0.149164) 0%,
+                rgba(0, 135, 254, 0.2) 0%,
+                rgba(0, 135, 254, 0) 100%
+            ),
+            radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%),
+            #1f1f1d;
+        @include transition;
+        transform: translateX(-100%);
+
+        &.is-active {
+            transform: translateX(0);
+        }
+    }
+}

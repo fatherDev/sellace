@@ -1,0 +1,11 @@
+.c-logo {
+    z-index: 10;
+
+    img {
+        height: 32px;
+
+        @include media(tablet-m) {
+            height: 40px;
+        }
+    }
+}
