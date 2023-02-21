@@ -1,0 +1,33 @@
+// Colors
+$gray-100: #1f1f1d;
+$gray-80: #40403e;
+$gray-60: #5f5f5c;
+$gray-40: #727270;
+$gray-10: #9b9b99;
+$gray-5: #bbbbb8;
+$gray-0: #fafaf7;
+
+$white: #ffffff;
+$white-70: rgba(#ffffff, 0.72);
+$white-70: rgba(#ffffff, 0.4);
+
+$primary-100: #0e75ea;
+$primary-50: #0087fe;
+$primary-20: #0096ff;
+$primary-10: #2fa6ff;
+$primary-5: #5ab6ff;
+$primary-0: #8dcbff;
+
+// Breakpoints
+$breakpoints: (
+    // mobile: 767px,
+    tablet-s: 768px,
+    tablet-m: 992px,
+    desktop-l: 1168px,
+    desktop-xl: 1344px
+);
+
+$orientations: (
+    portrait: portrait,
+    landscape: landscape,
+);

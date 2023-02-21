@@ -1,3 +1,34 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Your styles here
+// Base
+@import "base/mixins";
+@import "base/variables";
+@import "base/fonts";
+@import "base/media-config";
+@import "base/functions";
+@import "base/typography";
+@import "base/global";
+
+body {
+    background: $primary-100;
+    font-family: "Mulish";
+    font-weight: 700 !important;
+    font-size: 10px;
+    @include h-600;
+
+    @include media(tablet-s) {
+        font-size: 20px;
+    }
+
+    @include media(tablet-m) {
+        font-size: 30px;
+    }
+
+    @include media(desktop-l) {
+        font-size: 40px;
+    }
+
+    @include media(desktop-xl) {
+        font-size: 50px;
+    }
+}

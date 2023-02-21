@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.l-inner {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 928px;
+
+    @include media(tablet-m) {
+        max-width: 1136px;
+        padding: 0 32px;
+    }
+}
