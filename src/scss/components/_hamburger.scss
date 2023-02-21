@@ -1,0 +1,39 @@
+.c-hamburger {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    z-index: 10;
+
+    @include media(tablet-s) {
+        display: none;
+    }
+
+    &__line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 22px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: $white;
+        @include transition;
+
+        &--top {
+            transform: translate(-50%, -4px);
+        }
+
+        &--bottom {
+            transform: translate(-50%, 4px);
+        }
+    }
+
+    &.is-active {
+        .c-hamburger__line--top {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+
+        .c-hamburger__line--bottom {
+            transform: translate(-50%, -50%) rotate(-135deg);
+        }
+    }
+}

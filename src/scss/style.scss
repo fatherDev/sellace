@@ -9,26 +9,12 @@
 @import "base/typography";
 @import "base/global";
 
-body {
-    background: $primary-100;
-    font-family: "Mulish";
-    font-weight: 700 !important;
-    font-size: 10px;
-    @include h-600;
+// Layout
+@import "layout/header";
 
-    @include media(tablet-s) {
-        font-size: 20px;
-    }
-
-    @include media(tablet-m) {
-        font-size: 30px;
-    }
-
-    @include media(desktop-l) {
-        font-size: 40px;
-    }
-
-    @include media(desktop-xl) {
-        font-size: 50px;
-    }
-}
+// Components
+@import "components/desktop-nav";
+@import "components/mobile-nav";
+@import "components/btn";
+@import "components/logo";
+@import "components/hamburger";

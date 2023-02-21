@@ -1,6 +1,23 @@
-<div class="l-header__wrapper">
-	<a class="c-logo" href="{{ site.url }}" rel="home"><img src="{{ theme.link }}/src/assets/img/logo.svg" alt=""></a>
-	<nav id="nav-main" class="nav-main" role="navigation">
-		{% include "menu.twig" with {'items': menu.get_items} %}
-	</nav>
-</div>
+<header class="l-header js-header">
+	<div class="l-inner l-header__inner">
+		<a class="c-logo" href="{{ site.url }}" rel="home">
+			<img src="{{ theme.link }}/src/assets/img/logo.svg" alt="">
+		</a>
+		<div class="l-header__col">
+			<nav id="nav-main" class="c-desktop-nav" role="navigation">
+				{% include "menu.twig" with {'items': menu.get_items} %}
+			</nav>
+			<a href="#" class="c-btn c-btn--secondary">Pobierz NDA</a>
+		</div>
+		<div class="c-hamburger js-hamburger">
+			<div class="c-hamburger__line c-hamburger__line--top"></div>
+			<div class="c-hamburger__line c-hamburger__line--bottom"></div>
+		</div>
+	</div>
+
+	<div class="l-header__mobile-menu js-mobile-menu">
+		<nav id="nav-main" class="c-mobile-nav js-mobile-nav" role="navigation">
+			{% include "menu.twig" with {'items': menu.get_items} %}
+		</nav>
+	</div>
+</header>

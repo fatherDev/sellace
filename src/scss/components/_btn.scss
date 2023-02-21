@@ -1,0 +1,16 @@
+.c-btn {
+    padding: 12px 24px;
+    @include h-300;
+    border-radius: 2px;
+    color: $white;
+    @include transition;
+
+    &--secondary {
+        background-color: transparent;
+        border: 1px solid $white;
+
+        &:hover {
+            background-color: $white-40;
+        }
+    }
+}
