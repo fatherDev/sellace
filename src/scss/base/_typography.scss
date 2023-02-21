@@ -1,0 +1,7 @@
+.t-typo-h1 {
+    @include h-600;
+
+    @include media(desktop-xl) {
+        @include h-700;
+    }
+}
