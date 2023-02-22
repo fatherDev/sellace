@@ -45,7 +45,7 @@
             color: $gray-100;
             @include h-500;
 
-            @include media(tablet-s) {
+            @include media(desktop-l) {
                 @include h-600;
             }
         }

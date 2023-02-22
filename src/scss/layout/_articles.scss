@@ -1,0 +1,44 @@
+.l-articles {
+    padding: 64px 0;
+
+    @include media(tablet-s) {
+        padding: 72px 0 100px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+
+        @include media(tablet-s) {
+            margin-bottom: 48px;
+        }
+    }
+
+    .c-btn,
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        * {
+            color: $gray-100;
+            @include h-500;
+
+            @include media(desktop-l) {
+                @include h-600;
+            }
+        }
+    }
+
+    &__grid {
+        column-gap: 0;
+        row-gap: 64px;
+
+        @include media(tablet-s) {
+            column-gap: 64px;
+        }
+    }
+}

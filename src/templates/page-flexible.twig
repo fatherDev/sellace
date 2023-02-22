@@ -21,5 +21,9 @@
 			{% include '/src/templates/organisms/icon-box-section.twig' %}
 		{% endif %}
 
+		{% if type == "articles_section" %}
+			{% include '/src/templates/organisms/articles.twig' %}
+		{% endif %}
+
 	{% endfor %}
 {% endblock %}
