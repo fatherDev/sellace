@@ -1,0 +1,19 @@
+<div class="l-articles">
+    <div class="l-inner l-articles__inner">
+        <div class="l-articles__wrapper">
+            <div class="l-articles__title">
+                {{ section.title }}
+            </div>
+            {% include '/src/templates/atoms/btn.twig' with {
+                additionalClass: 'c-btn--primary',
+                url: section.link,
+                text: section.link.title
+            } %}
+        </div>
+        <div class="l-grid l-articles__grid">
+            {% for item in section.articles_repeater %}
+                {% include '/src/templates/molecules/article-teaser.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<a href="{{ item.article.link }}" class="c-article-teaser">
+    <div class="c-article-teaser__img">
+        <img src="{{ item.article.thumbnail.src }}"
+        alt="{{ item.article.thumbnail.title }}"
+        height="{{ item.article.thumbnail.sizes.medium.height }}"
+        width="{{ item.article.thumbnail.sizes.medium.width }}">
+    </div>
+    <p class="c-article-teaser__title">{{ item.article.post_title }}</p>
+    <div class="c-article-teaser__wrapper">
+        <p class="c-article-teaser__date">{{ item.article.date('F j Y') }}</p>
+        <div class="c-article-teaser__more-wrapper">
+            <p class="c-article-teaser__more">Czytaj</p>
+            <img src="{{ theme.link }}/src/assets/img/arrow.svg" alt="Ikona strzałki">
+        </div>
+    </div>
+</a>
