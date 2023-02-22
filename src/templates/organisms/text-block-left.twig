@@ -4,11 +4,16 @@
 			<h1 class="l-text-block-left__title">{{ section.title }}</h1>
 			<p class="l-text-block-left__desc">{{ section.desc }}</p>
 			<div class="l-text-block-left__btn-wrapper">
-				{% include '/src/templates/atoms/btn.twig' with {
+				{% if section.button %}
+					{% include '/src/templates/atoms/btn.twig' with {
 					additionalClass: 'c-btn--primary',
 					text: section.button.title
 				} %}
-				<a href="tel:{{ section.phone }}" class="l-text-block-left__btn">{{ section.phone }}</a>
+				{% endif %}
+				{% if section.phone %}
+					<a href="tel:{{ section.phone }}" class="l-text-block-left__btn">{{ section.phone }}</a>
+				{% endif %}
+
 			</div>
 		</div>
 		<div class="l-text-block-left__col">
