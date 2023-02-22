@@ -9,7 +9,9 @@
 			{% include '/src/templates/organisms/text-block-left.twig' %}
 		{% endif %}
 
-		{% if type == "left_img" %}{% endif %}
+		{% if type == "left_img" %}
+			{% include '/src/templates/organisms/text-block-right.twig' %}
+		{% endif %}
 
 	{% endfor %}
 {% endblock %}

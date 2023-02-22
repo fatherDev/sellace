@@ -1,0 +1,19 @@
+<section class="l-text-block-right">
+	<div class="l-inner l-text-block-right__inner">
+		<div class="l-text-block-right__col">
+			<img class="l-text-block-right__img" src="{{ section.img.url }}" alt="">
+		</div>
+		<div class="l-text-block-right__col">
+			<div class="l-text-block-right__title">{{ section.title }}</div>
+
+			<ul class="l-text-block-right__list">
+				{% for item in section.advantages %}
+					<li class="l-text-block-right__list-item">
+						{% include '/src/templates/atoms/checkmark.twig' %}
+						{{ item.advantage }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
