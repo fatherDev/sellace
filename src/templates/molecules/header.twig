@@ -7,7 +7,10 @@
 			<nav id="nav-main" class="c-desktop-nav" role="navigation">
 				{% include "menu.twig" with {'items': menu.get_items} %}
 			</nav>
-			<a href="#" class="c-btn c-btn--secondary">Pobierz NDA</a>
+			{% include '/src/templates/atoms/btn.twig' with {
+				additionalClass: 'c-btn--secondary',
+				text: 'Pobierz NDA'
+			} %}
 		</div>
 		<div class="c-hamburger js-hamburger">
 			<div class="c-hamburger__line c-hamburger__line--top"></div>

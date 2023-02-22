@@ -1,0 +1,69 @@
+.l-text-block-left {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(
+            35.21% 43.76% at 5.1% 7.01%,
+            rgba(0, 135, 254, 0.149164) 0%,
+            rgba(0, 135, 254, 0.2) 0%,
+            rgba(0, 135, 254, 0) 100%
+        ),
+        radial-gradient(27.36% 45.53% at 90.42% 60.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%), #1f1f1d;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10vh;
+        gap: 32px;
+
+        @include media(tablet-s) {
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+
+    &__col {
+        width: 100%;
+
+        @include media(tablet-s) {
+            width: 50%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        color: $white;
+        @include h-600;
+
+        @include media(tablet-m) {
+            @include h-700;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 48px;
+        color: $white-70;
+        @include b-large;
+    }
+
+    &__btn {
+        color: $white;
+        @include b-large;
+        white-space: nowrap;
+        border-bottom: 1px solid $white;
+        @include transition;
+
+        &:hover {
+            color: $white-40;
+            border-color: $white-40;
+        }
+    }
+
+    .c-btn {
+        margin-right: 32px;
+    }
+}
