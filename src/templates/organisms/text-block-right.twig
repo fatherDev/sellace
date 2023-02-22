@@ -1,7 +1,10 @@
 <section class="l-text-block-right">
 	<div class="l-inner l-text-block-right__inner">
 		<div class="l-text-block-right__col">
-			<img class="l-text-block-right__img" src="{{ section.img.url }}" alt="">
+			{% include '/src/templates/atoms/img.twig' with {
+				additionalClass: 'l-text-block-right__img',
+				img: section.img
+			} %}
 		</div>
 		<div class="l-text-block-right__col">
 			<div class="l-text-block-right__title">{{ section.title }}</div>

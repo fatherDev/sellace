@@ -19,6 +19,14 @@
     &__inner {
         justify-content: space-between;
         padding: 24px 16px;
+
+        @include media(tablet-s) {
+            padding: 24px 32px;
+        }
+
+        @include media(desktop-l) {
+            padding: 24px 0;
+        }
     }
 
     &__col {

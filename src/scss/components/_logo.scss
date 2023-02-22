@@ -3,6 +3,7 @@
 
     img {
         height: 32px;
+        width: auto;
 
         @include media(tablet-m) {
             height: 40px;

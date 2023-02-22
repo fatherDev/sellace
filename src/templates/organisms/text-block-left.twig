@@ -17,7 +17,10 @@
 			</div>
 		</div>
 		<div class="l-text-block-left__col">
-			<img class="l-text-block-left__img" src="{{ section.img.url }}" alt="">
+			{% include '/src/templates/atoms/img.twig' with {
+				additionalClass: 'l-text-block-left__img',
+				img: section.img
+			} %}
 		</div>
 	</div>
 </section>

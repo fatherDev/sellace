@@ -1,0 +1,27 @@
+.c-icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 12 span;
+    text-align: center;
+
+    @include media(tablet-m) {
+        grid-column: 3 span;
+    }
+
+    &__title {
+        margin: 16px 0 8px;
+        color: $gray-100;
+        @include h-300;
+
+        @include media(tablet-s) {
+            @include h-400;
+        }
+    }
+
+    &__desc {
+        color: $gray-60;
+        @include b-medium;
+    }
+}
