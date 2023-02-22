@@ -1,0 +1,10 @@
+<div class="c-icon-box">
+    <div class="c-icon-box__img">
+    {% include '/src/templates/atoms/img.twig' with {
+        additionalClass: 'c-icon-box__icon',
+        img: img
+    } %}
+    </div>
+    <p class="c-icon-box__title">{{ title }}</p>
+    <p class="c-icon-box__desc">{{ desc }}</p>
+</div>
