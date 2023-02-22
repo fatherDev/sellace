@@ -1,0 +1,37 @@
+.c-number-box {
+    padding-left: 16px;
+    grid-column: 12 span;
+
+    @include media(tablet-s) {
+        grid-column: 4 span;
+    }
+
+    &__number {
+        position: relative;
+        margin-bottom: 12px;
+        color: $white;
+        @include h-400;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: -16px;
+            content: "";
+            display: block;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: $primary-50;
+            transform: translateY(-50%);
+        }
+
+        @include media(tablet-s) {
+            @include h-500;
+        }
+    }
+
+    &__text {
+        color: $white-70;
+        @include b-medium;
+    }
+}
