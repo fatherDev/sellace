@@ -45,12 +45,13 @@
     }
 
     &__desc {
-        margin-bottom: 48px;
+        margin-bottom: 40px;
         color: $white-70;
         @include b-large;
     }
 
     &__btn {
+        display: inline-block;
         color: $white;
         @include b-large;
         white-space: nowrap;
@@ -65,5 +66,11 @@
 
     .c-btn {
         margin-right: 32px;
+    }
+
+    &__btn-wrapper {
+        a {
+            margin: 8px 0 0 0;
+        }
     }
 }

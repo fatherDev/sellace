@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     @include transition;
+    z-index: 10;
 
     &--scrolled {
         transform: translateY(-100%);

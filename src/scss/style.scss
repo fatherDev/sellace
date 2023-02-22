@@ -13,6 +13,8 @@
 @import "layout/header";
 @import "layout/text-block-left";
 @import "layout/text-block-right";
+@import "layout/grid";
+@import "layout/number-section";
 
 // Components
 @import "components/desktop-nav";
@@ -21,3 +23,5 @@
 @import "components/logo";
 @import "components/hamburger";
 @import "components/checkmark";
+@import "components/number-box";
+@import "components/line";

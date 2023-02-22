@@ -13,5 +13,9 @@
 			{% include '/src/templates/organisms/text-block-right.twig' %}
 		{% endif %}
 
+		{% if type == "numbers_section" %}
+			{% include '/src/templates/organisms/numbers-section.twig' %}
+		{% endif %}
+
 	{% endfor %}
 {% endblock %}

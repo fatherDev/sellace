@@ -1,0 +1,26 @@
+<section class="l-number-section">
+	<div class="l-inner l-number-section__inner">
+		<div class="l-grid">
+			{% for item in section.info_repeater %}
+
+				{% include '/src/templates/molecules/number-box.twig' with {
+                    number: item.number,
+                    text: item.text
+                } %}
+
+			{% endfor %}
+		</div>
+
+		{% include '/src/templates/atoms/line.twig' %}
+	
+		{% if section.link %}
+			<div class="l-number-section__btn-wrapper">
+				{% include '/src/templates/atoms/btn.twig' with {
+					additionalClass: 'c-btn--primary',
+					text: section.link.title
+				} %}
+			</div>
+		{% endif %}
+		
+	</div>
+</section>
