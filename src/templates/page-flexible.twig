@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% for section in post.meta('flexible_sections') %}
+
+		{% set type = section.acf_fc_layout %}
+
+		{% if type == "right_img" %}
+			{% include '/src/templates/organisms/text-block-left.twig' %}
+		{% endif %}
+
+		{% if type == "left_img" %}{% endif %}
+
+	{% endfor %}
+{% endblock %}
