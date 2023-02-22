@@ -17,5 +17,9 @@
 			{% include '/src/templates/organisms/numbers-section.twig' %}
 		{% endif %}
 
+		{% if type == "icon_box_section" %}
+			{% include '/src/templates/organisms/icon-box-section.twig' %}
+		{% endif %}
+
 	{% endfor %}
 {% endblock %}

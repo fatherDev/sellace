@@ -1,0 +1,16 @@
+<section class="l-icon-box-section">
+    <div class="l-inner l-icon-box-section__inner">
+        <div class="l-icon-box-section__title">
+            {{ section.title }}
+        </div>
+        <div class="l-grid">
+            {% for item in section.icon_box_repeater %}
+                {% include '/src/templates/molecules/icon-box.twig' with {
+                    img: item.icon,
+                    title: item.title,
+                    desc: item.text
+                } %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
