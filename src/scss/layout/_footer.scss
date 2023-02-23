@@ -1,0 +1,76 @@
+.l-footer {
+    padding: 64px 0;
+    background: radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%),
+        #1f1f1d;
+
+    &__box-text,
+    &__socket,
+    &__socket a {
+        @include b-medium;
+        color: $white-70;
+    }
+
+    &__box-text {
+        margin-top: 16px;
+        max-width: 100%;
+
+        @include media(tablet-s) {
+            max-width: 470px;
+        }
+    }
+
+    .c-line {
+        margin: 64px 0;
+    }
+
+    &__socket,
+    &__socket-inner {
+        display: flex;
+        flex-direction: column;
+
+        @include media(tablet-s) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__socket {
+        justify-content: space-between;
+
+        &-inner-text {
+            margin: 0 24px 8px 0;
+
+            @include media(tablet-s) {
+                margin: 0 24px 0 0;
+            }
+        }
+
+        &-inner {
+            margin-bottom: 32px;
+
+            @include media(tablet-s) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include media(tablet-s) {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+    }
+
+    &__box {
+        margin-bottom: 48px;
+
+        @include media(tablet-s) {
+            margin-bottom: 0;
+        }
+    }
+}

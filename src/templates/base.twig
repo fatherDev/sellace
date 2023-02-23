@@ -7,30 +7,27 @@
 {% endblock %}
 
 <body class="{{ body_class }}">
-
     {% block header %}
         {% include '/src/templates/molecules/header.twig' %}
     {% endblock %}
 
-<section id="content" role="main" class="content-wrapper">
-    {% if title %}<h1>{{ title }}</h1>{% endif %}
-    <div class="wrapper {{ sidebar_class }}">
-        {% block content %}
-            Sorry, no content
-        {% endblock %}
-    </div>
-    {% if sidebar %}
-        <aside class="layout-sidebar">
-            {{ sidebar }}
-        </aside>
-    {% endif %}
-</section>
+    <section id="content" role="main" class="content-wrapper">
+        {% if title %}<h1>{{ title }}</h1>{% endif %}
+        <div class="wrapper {{ sidebar_class }}">
+            {% block content %}
+                Sorry, no content
+            {% endblock %}
+        </div>
+        {% if sidebar %}
+            <aside class="layout-sidebar">
+                {{ sidebar }}
+            </aside>
+        {% endif %}
+    </section>
 
-{% block footer %}
-    <footer id="footer">
-        {% include 'footer.twig' %}
-    </footer>
-    {{ function('wp_footer') }}
-{% endblock %}
+    {% block footer %}
+        {% include '/src/templates/molecules/footer.twig' %}
+        {{ function('wp_footer') }}
+    {% endblock %}
 </body>
 </html>

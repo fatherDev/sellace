@@ -92,6 +92,7 @@ class StarterSite extends Timber\Site
         $context['notes'] =
             'These values are available everytime you call Timber::context();';
         $context['menu'] = new Timber\Menu();
+        $context['footer_menu'] = new Timber\Menu('footer-menu');
         $context['site'] = $this;
         return $context;
     }
@@ -191,6 +192,27 @@ class StarterSite extends Timber\Site
         return null;
     }
 
+    
+}
+
+/* OPTIONS PAGE ACF */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Ustawienia globalne',
+		'menu_title'	=> 'Ustawienia globalne',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+}
+
+add_filter( 'timber_context', 'mytheme_timber_context'  );
+
+function mytheme_timber_context( $context ) {
+    $context['options'] = get_fields('option');
+    return $context;
 }
 
 new StarterSite();
