@@ -6,6 +6,10 @@
     @include transition;
     z-index: 10;
 
+    &--gray {
+        background-color: rgba($gray-100, 0.5);
+    }
+
     &--scrolled {
         transform: translateY(-100%);
     }
