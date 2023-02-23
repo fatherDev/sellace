@@ -1,0 +1,26 @@
+<footer class="l-footer">
+    <div class="l-inner l-footer__inner">
+    <div class="l-footer__wrapper">
+        <div class="l-footer__box">
+            <a class="c-logo" href="{{ site.url }}" rel="home">
+			    <img src="{{ theme.link }}/src/assets/img/logo.svg" alt="Logo" width="188" height="40">
+		    </a>
+            <p class="l-footer__box-text">{{ options.logo_text }}</p>
+        </div>
+
+        <nav id="nav-footer" class="c-footer-nav" role="navigation">
+			{% include "menu.twig" with {'items': footer_menu.get_items} %}
+		</nav>
+    </div>
+
+        {% include '/src/templates/atoms/line.twig' %}
+
+        <div class="l-footer__socket">
+            <div class="l-footer__socket-inner">
+                <p class="l-footer__socket-inner-text">{{ options.copyright_text }}</p>
+                <a href="{{ options.footer_link.url }}">{{ options.footer_link.title }}</a>
+            </div>
+            <p class="l-footer__socket-inner-text">{{ options.creator_info }}</p>
+        </div>
+    </div>
+</footer>
